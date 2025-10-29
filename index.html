@@ -9,8 +9,8 @@
     <style>
 /* --- Configurações Globais e Variáveis --- */
 :root {
-    --primary-color: #3B5998; /* Um azul suave, psicológico */
-    --secondary-color: #8CADD4;
+    --primary-color: #77539E; /* Um azul suave, psicológico */
+    --secondary-color: #D193C0;
     --light-bg: #F4F7FA;
     --text-color: #333;
     --text-light: #555;
@@ -115,7 +115,7 @@ body::-webkit-scrollbar {
 .header-container {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin:  0 0 0 9%;
     gap: 1rem;;/* começa do lado esquero */
     
@@ -173,7 +173,7 @@ body::-webkit-scrollbar {
     bottom: -8px; /* afastado do texto */
     width: 0;
     height: 3px;
-    background: #0077ff;
+    background: var(--secondary-color);
     border-radius: 2px; /* deixa mais bonitinho */
     transition: width 0.3s ease;
 }
@@ -780,7 +780,7 @@ body::-webkit-scrollbar {
     <div class="scroll-progress"></div>
 
 
-    <a href="https://wa.me/5561999999999?text=Olá, gostaria de agendar uma consulta" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/5561993287163?text=Olá, gostaria de agendar uma consulta" class="whatsapp-float" target="_blank">
         <svg viewBox="0 0 32 32">
             <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 8.135-2.135c2.369 1.228 5.021 1.885 7.865 1.885 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.333c-2.547 0-5.043-0.713-7.235-2.061l-0.523-0.312-5.413 1.419 1.443-5.377-0.347-0.547c-1.469-2.319-2.245-4.995-2.245-7.771 0-7.364 5.991-13.355 13.355-13.355s13.355 5.991 13.355 13.355c0 7.364-5.991 13.355-13.355 13.355zM22.107 18.413c-0.372-0.187-2.197-1.083-2.537-1.208-0.341-0.124-0.589-0.187-0.837 0.187s-0.961 1.208-1.179 1.456c-0.217 0.248-0.434 0.279-0.806 0.093-0.372-0.187-1.571-0.579-2.991-1.845-1.107-0.987-1.853-2.204-2.071-2.576s-0.023-0.574 0.164-0.76c0.168-0.168 0.372-0.434 0.558-0.651 0.187-0.217 0.248-0.372 0.372-0.62s0.062-0.465-0.031-0.651c-0.093-0.187-0.837-2.011-1.147-2.755-0.303-0.724-0.611-0.625-0.837-0.636-0.217-0.011-0.465-0.013-0.713-0.013s-0.651 0.093-0.992 0.465c-0.341 0.372-1.301 1.271-1.301 3.103s1.332 3.599 1.519 3.847c0.187 0.248 2.633 4.019 6.379 5.637 0.891 0.384 1.587 0.614 2.129 0.786 0.895 0.283 1.709 0.244 2.353 0.148 0.718-0.107 2.197-0.899 2.507-1.766s0.31-1.613 0.217-1.766c-0.093-0.155-0.341-0.248-0.713-0.435z"/>
         </svg>
@@ -789,7 +789,7 @@ body::-webkit-scrollbar {
     <header class="header">
         <div class="header-container">
                             <a href="#inicio" class="logo-link">
-                <img src="https://st.depositphotos.com/1378583/4943/v/450/depositphotos_49430703-stock-illustration-mind-tree-logo.jpg" style="width: 7rem; height: 7rem;" alt="Logo Psicologia Luz" class="logo-img">
+                <img src="/img/logo.png" style="width: 9rem; height: 7rem;" alt="Logo Psicologia Luz" class="logo-img">
                 </a>
 
                 <h1 class="clinic-name">Psicologia Luz</h1>
@@ -821,7 +821,7 @@ body::-webkit-scrollbar {
                 <div class="hero-text">
                     <h2>Cuidando do seu bem-estar emocional</h2>
                     <p>
-                        Dra. Ana Silva (CRP 01/00000) é psicóloga clínica com especialização em Terapia Cognitivo-Comportamental (TCC), dedicada a oferecer um espaço seguro e acolhedor para o seu desenvolvimento pessoal.
+                        Dra. Cristina Santos Alves de Araújo (CRP 01/19554) é psicóloga clínica com especialização em Terapia Cognitivo-Comportamental (TCC), dedicada a oferecer um espaço seguro e acolhedor para o seu desenvolvimento pessoal.
                     </p>
                     <p>
                         Com foco em ansiedade, depressão e autoconhecimento, minha missão é guiar você através dos desafios da vida, promovendo saúde mental e equilíbrio.
@@ -880,30 +880,35 @@ body::-webkit-scrollbar {
                 </div>
                 <div class="horario-item">
                     <input type="checkbox" checked disabled>
-                    <span>14:00 - 18:00</span>
+                    <span>14:00 - 17:00</span>
                 </div>
             </div>
             <div class="horario-dia">
                 <h3>Terça-feira</h3>
                 <div class="horario-item">
                     <input type="checkbox" checked disabled>
-                    <span>08:00 - 12:00</span>
+                    <span>Sem Atendimento</span>
                 </div>
+                <!--
                 <div class="horario-item">
                     <input type="checkbox" checked disabled>
                     <span>14:00 - 18:00</span>
                 </div>
+                -->
+                
             </div>
             <div class="horario-dia">
                 <h3>Quarta-feira</h3>
                 <div class="horario-item">
                     <input type="checkbox" checked disabled>
-                    <span>08:00 - 12:00</span>
+                    <span>Sem Atendimento</span>
                 </div>
+                <!--
                 <div class="horario-item">
                     <input type="checkbox" checked disabled>
                     <span>14:00 - 18:00</span>
                 </div>
+                -->
             </div>
             <div class="horario-dia">
                 <h3>Quinta-feira</h3>
@@ -913,7 +918,7 @@ body::-webkit-scrollbar {
                 </div>
                 <div class="horario-item">
                     <input type="checkbox" checked disabled>
-                    <span>14:00 - 18:00</span>
+                    <span>14:00 - 17:00</span>
                 </div>
             </div>
             <div class="horario-dia">
@@ -924,8 +929,16 @@ body::-webkit-scrollbar {
                 </div>
                 <div class="horario-item">
                     <input type="checkbox" checked disabled>
-                    <span>14:00 - 16:00</span>
+                    <span>14:00 - 17:00</span>
                 </div>
+            </div>
+            <div class="horario-dia">
+                <h3>Sábado</h3>
+                <div class="horario-item">
+                    <input type="checkbox" checked disabled>
+                    <span>08:00 - 15:00</span>
+                </div>
+                
             </div>
         </div>
     </section>
@@ -953,28 +966,35 @@ body::-webkit-scrollbar {
         </section>
 
         <section id="localizacao" class="section">
-            <div class="container">
-                <h2 class="section-title">Localização</h2>
-                <div class="map-container">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3838.996168913985!2d-48.06018388514501!3d-15.792376989044812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a33658d883f3f%3A0x6d11f7f0036e5f6!2sTaguatinga%20Shopping!5e0!3m2!1spt-BR!2sbr!4v1678886450123!5m2!1spt-BR!2sbr" 
-                        width="100%" 
-                        height="450" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade"
-                        title="Mapa da localização da clínica">
-                    </iframe>
-                    <a 
-                        href="https://www.google.com/maps/dir/?api=1&destination=Taguatinga+Shopping" 
-                        target="_blank" 
-                        class="map-directions-link">
-                        Ver rotas no Google Maps
-                    </a>
-                </div>
+            <a 
+                id="rotaGoogleMaps" 
+                target="_blank" 
+                class="map-directions-link">
+                Ver rotas no Google Maps
+                </a>
+        <div class="container">
+            <h2 class="section-title">Localização</h2>
+            <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3838.996168913985!2d-48.1039853!3d-15.8223150!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a…%3A0x…!2sQNM%2003%20Conjunto%20O%20%C2%BA%2037%20Sala%20106%20Ceil%C3%A2ndia%20Sul!5e0!3m2!1spt-BR!2sbr!4v…!5m2!1spt-BR!2sbr" 
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Mapa da localização da clínica">
+            </iframe>
+            <a 
+                href="https://www.google.com/maps/dir/?api=1&destination=-15.8223150,-48.1039853" 
+                target="_blank" 
+                class="map-directions-link">
+                Ver rotas no Google Maps
+            </a>
             </div>
+        </div>
         </section>
+
 
     </main>
 
@@ -991,13 +1011,13 @@ body::-webkit-scrollbar {
             <div class="footer-column">
                 <h4>Contato</h4>
                 <p><i class="ph ph-envelope"></i> contato@psicologialuz.com.br</p>
-                <p><i class="ph ph-phone"></i> (61) 0000-0000</p>
+                <p><i class="ph ph-phone"></i> (61) 99328-7163</p>
             </div>
             <div class="footer-column">
                 <h4>Endereço</h4>
-                <p><i class="ph ph-map-pin"></i> Edifício Clinical Tower, Sala 301</p>
-                <p>Brasília, DF, 70000-000</p>
-                <p>CRP-DF: 01/PJ-0000</p>
+                <p><i class="ph ph-map-pin"></i> QNM 03 Conjunto 'O' Nº 37, Sala 106</p>
+                <p>Ceilândia Sul, DF, 72215-045</p>
+                <p>CRP-DF: 01/PJ-19554</p>
 
                 <div class="footer-column footer-top-link">
                 <a href="#inicio" class="back-to-top" aria-label="Voltar ao topo">
@@ -1123,6 +1143,34 @@ window.addEventListener("scroll", () => {
         document.querySelector(".scroll-progress").style.width = progress + "%";
     });
 
+
+// geolocalização
+const destino = "-15.8223150,-48.1039853"; 
+const botaoRota = document.getElementById("rotaGoogleMaps");
+
+botaoRota.addEventListener("click", (event) => {
+  event.preventDefault();
+
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        const lat = pos.coords.latitude;
+        const lon = pos.coords.longitude;
+
+        const url = `https://www.google.com/maps/dir/?api=1&origin=${lat},${lon}&destination=${destino}&travelmode=driving`;
+
+        window.open(url, "_blank");
+      },
+      () => {
+        const url = `https://www.google.com/maps/dir/?api=1&destination=${destino}&travelmode=driving`;
+        alert("⚠ Permita acesso à localização para traçar a rota a partir do seu local atual!");
+        window.open(url, "_blank");
+      }
+    );
+  } else {
+    alert("Seu navegador não suporta geolocalização.");
+  }
+});
 
 
 

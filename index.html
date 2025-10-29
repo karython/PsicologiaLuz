@@ -965,30 +965,31 @@ body::-webkit-scrollbar {
             </div>
         </section>
 
-        <section id="localizacao" class="section">
-         
-        <div class="container">
-            <h2 class="section-title">Localização</h2>
-            <div class="map-container">
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3838.996168913985!2d-48.1039853!3d-15.8223150!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a…%3A0x…!2sQNM%2003%20Conjunto%20O%20%C2%BA%2037%20Sala%20106%20Ceil%C3%A2ndia%20Sul!5e0!3m2!1spt-BR!2sbr!4v…!5m2!1spt-BR!2sbr" 
-                width="100%" 
-                height="450" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy" 
+<section id="localizacao" class="section">     
+    <div class="container">
+        <h2 class="section-title">Localização</h2>
+        <div class="map-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3839.215593434276!2d-48.111334599999996!3d-15.856087199999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935bcd5fc0ca2365%3A0x6c15a2a9293711aa!2sQNM%2003%20Clinica%20de%20Psicologia%20Luz%20LTDA.!5e0!3m2!1spt-BR!2sbr!4v1730200000000!5m2!1spt-BR!2sbr"
+                width="100%"
+                height="450"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
                 title="Mapa da localização da clínica">
             </iframe>
+
             <a 
-                href="https://www.google.com/maps/dir/?api=1&destination=-15.8223150,-48.1039853" 
-                target="_blank" 
+                href="https://www.google.com/maps/dir//QNM+03+Clinica+de+Psicologia+Luz+LTDA.,+Conj.+O+Lote+37+Sl+106+-+Sol+Nascente%2FP%C3%B4r+do+Sol,+Bras%C3%ADlia+-+DF,+72215-045"
+                target="_blank"
                 class="map-directions-link">
                 Ver rotas no Google Maps
             </a>
-            </div>
         </div>
-        </section>
+    </div>
+</section>
+
 
 
     </main>
@@ -1140,11 +1141,25 @@ window.addEventListener("scroll", () => {
 
 
 // geolocalização
-const destino = "-15.8223150,-48.1039853"; 
+// Coordenadas do destino ✅ (local marcado da clínica)
+const destino = "-15.8560872,-48.1113346"; 
+
 const botaoRota = document.getElementById("rotaGoogleMaps");
+
+// Loader (opcional)
+function mostrarCarregando() {
+  botaoRota.textContent = "Obtendo sua localização...";
+  botaoRota.disabled = true;
+}
+
+function restaurarBotao() {
+  botaoRota.textContent = "Ver rotas";
+  botaoRota.disabled = false;
+}
 
 botaoRota.addEventListener("click", (event) => {
   event.preventDefault();
+  mostrarCarregando();
 
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(
@@ -1154,18 +1169,22 @@ botaoRota.addEventListener("click", (event) => {
 
         const url = `https://www.google.com/maps/dir/?api=1&origin=${lat},${lon}&destination=${destino}&travelmode=driving`;
 
+        restaurarBotao();
         window.open(url, "_blank");
       },
       () => {
         const url = `https://www.google.com/maps/dir/?api=1&destination=${destino}&travelmode=driving`;
         alert("⚠ Permita acesso à localização para traçar a rota a partir do seu local atual!");
+        restaurarBotao();
         window.open(url, "_blank");
       }
     );
   } else {
     alert("Seu navegador não suporta geolocalização.");
+    restaurarBotao();
   }
 });
+
 
 
 
